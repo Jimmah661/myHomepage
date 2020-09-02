@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Homepage</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <h3>Hey James</h3>
+    <p>The time is <span id="time"></span></p>
+    <p id='date'></p>
+    <span id='links'>
+      <a href='https://youtube.com/' target="_blank"><i class="fab fa-youtube-square"></i></a>
+      <a href='https://github.com/' target="_blank"><i class="fab fa-github-square"></i></a>
+      <a href='https://facebook.com/' target="_blank"><i class="fab fa-facebook-square"></i></a>
+      <a href='https://twitter.com/' target="_blank"><i class="fab fa-twitter-square"></i></a>
+      <a href='https://drive.google.com/drive/my-drive' target="_blank"><i class="fab fa-google-drive"></i></a>
+      <a href='https://reactjs.org/docs/getting-started.html' target="_blank"><i class="fab fa-react"></i></a>
+      <a href='https://www.twitch.tv/' target="_blank"><i class="fab fa-twitch"></i></a>
+    </span>
+    <script src='./moment.js' async defer></script>
+    <script async defer>
+      var date, time;
+      window.onload = () => {
+        date = moment().format('DD/MM/YYYY');
+        time = moment().format('h:mm:ss')
+        document.getElementById('date').innerHTML = date;
+        setInterval(() => {
+          time = moment().format('h:mm:ss')
+          document.getElementById('time').innerHTML = time;
+        }, 1000)
+      }
+    </script>
+  </body>
+</html>
