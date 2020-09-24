@@ -42,6 +42,6 @@ p {
   position: absolute;
   bottom: 5px;
 }
-.fab {
+.fab, .fas {
   color: #FAD744;
 }
