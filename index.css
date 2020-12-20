@@ -45,3 +45,12 @@ p {
 .fab, .fas {
   color: #FAD744;
 }
+
+a {
+  text-decoration: none;
+}
+
+a p {
+  display: none;
+  color: transparent;
+}
